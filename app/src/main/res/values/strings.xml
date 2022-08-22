@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">Covid 19 Tracker App</string>
+    <string name="active">Active</string>
+    <string name="recovered">Recovered</string>
+    <string name="deaths">Deaths</string>
+    <string name="last_updated">Last Updated</string>
+    <string name="state_data">State Data</string>
+    <string name="samples_tested">Samples Tested</string>
+    <string name="confirmed">Confirmed</string>
 </resources>
