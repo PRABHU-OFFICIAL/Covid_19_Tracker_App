@@ -506,6 +506,25 @@
 
             </androidx.cardview.widget.CardView>
 
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/lgm_project_task_1"
+                android:textStyle="bold"
+                android:layout_marginTop="50dp"
+                android:gravity="center"
+                android:textColor="#ff003d"
+                />
+
+            <TextView
+                android:id="@+id/powerText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/powered_by_litu_2003"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:textColor="#ff003d"
+                />
         </LinearLayout>
 
     </androidx.core.widget.NestedScrollView>

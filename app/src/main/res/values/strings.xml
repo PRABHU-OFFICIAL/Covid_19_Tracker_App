@@ -7,4 +7,6 @@
     <string name="state_data">State Data</string>
     <string name="samples_tested">Samples Tested</string>
     <string name="confirmed">Confirmed</string>
+    <string name="powered_by_litu_2003">Powered By Litu © 2003</string>
+    <string name="lgm_project_task_1">LGM PROJECT TASK-1</string>
 </resources>
