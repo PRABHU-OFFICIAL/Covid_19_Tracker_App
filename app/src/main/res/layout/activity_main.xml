@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:id="@+id/swipeRefreshLayout">
 
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
@@ -169,23 +170,21 @@
                             android:textSize="16sp"/>
 
                         <TextView
-                            android:id="@+id/activity_main_confirmed_textview"
+                            android:id="@+id/confirmed"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="5dp"
                             android:gravity="center"
-                            android:text="10000"
                             android:textStyle="bold"
                             android:textColor="@android:color/black"
                             android:textSize="24sp"/>
 
                         <TextView
-                            android:id="@+id/activity_main_confirmed_new_textview"
+                            android:id="@+id/confirmedNew"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginBottom="25dp"
                             android:gravity="center"
-                            android:text="+2000"
                             android:textStyle="bold"
                             android:textColor="#fbc233"
                             android:textSize="16sp"/>
@@ -223,23 +222,21 @@
                             android:textSize="16sp"/>
 
                         <TextView
-                            android:id="@+id/activity_main_active_textview"
+                            android:id="@+id/active"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="5dp"
                             android:gravity="center"
-                            android:text="10000"
                             android:textStyle="bold"
                             android:textColor="@android:color/black"
                             android:textSize="24sp"/>
 
                         <TextView
-                            android:id="@+id/activity_main_active_new_textview"
+                            android:id="@+id/activeNew"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginBottom="25dp"
                             android:gravity="center"
-                            android:text="+2000"
                             android:textColor="#78d8f3"
                             android:textStyle="bold"
                             android:textSize="16sp"/>
@@ -278,23 +275,21 @@
                             android:textSize="16sp"/>
 
                         <TextView
-                            android:id="@+id/activity_main_recovered_textview"
+                            android:id="@+id/recovered"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="5dp"
                             android:gravity="center"
-                            android:text="10000"
                             android:textColor="@android:color/black"
                             android:textStyle="bold"
                             android:textSize="24sp"/>
 
                         <TextView
-                            android:id="@+id/activity_main_recovered_new_textview"
+                            android:id="@+id/recoveredNew"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginBottom="25dp"
                             android:gravity="center"
-                            android:text="+2000"
                             android:textStyle="bold"
                             android:textColor="#7ec544"
                             android:textSize="16sp"/>
@@ -332,23 +327,21 @@
                             android:textSize="16sp"/>
 
                         <TextView
-                            android:id="@+id/activity_main_death_textview"
+                            android:id="@+id/death"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="5dp"
                             android:gravity="center"
-                            android:text="10000"
                             android:textStyle="bold"
                             android:textColor="@android:color/black"
                             android:textSize="24sp"/>
 
                         <TextView
-                            android:id="@+id/activity_main_death_new_textview"
+                            android:id="@+id/deathNew"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginBottom="25dp"
                             android:gravity="center"
-                            android:text="+2000"
                             android:textColor="#f6404f"
                             android:textStyle="bold"
                             android:textSize="16sp"/>
@@ -388,23 +381,21 @@
                             android:textSize="16sp"/>
 
                         <TextView
-                            android:id="@+id/activity_main_samples_textview"
+                            android:id="@+id/test"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="5dp"
                             android:gravity="center"
-                            android:text="10000"
                             android:textStyle="bold"
                             android:textColor="@android:color/black"
                             android:textSize="24sp"/>
 
                         <TextView
-                            android:id="@+id/activity_main_samples_new_textview"
+                            android:id="@+id/testNew"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginBottom="25dp"
                             android:gravity="center"
-                            android:text="+2000"
                             android:textColor="#f37585"
                             android:textStyle="bold"
                             android:textSize="16sp"/>
@@ -443,23 +434,21 @@
                             android:textSize="16sp"/>
 
                         <TextView
-                            android:id="@+id/activity_main_time_textview"
+                            android:id="@+id/time"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="5dp"
                             android:gravity="center"
-                            android:text="10:00 AM"
                             android:textStyle="bold"
                             android:textColor="@android:color/black"
                             android:textSize="24sp"/>
 
                         <TextView
-                            android:id="@+id/activity_main_date_textview"
+                            android:id="@+id/date"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginBottom="25dp"
                             android:gravity="center"
-                            android:text="22 August 2022"
                             android:textStyle="bold"
                             android:textColor="@android:color/black"
                             android:textSize="16sp"/>
@@ -478,7 +467,8 @@
                 android:layout_columnWeight="1"
                 android:layout_margin="8dp"
                 app:cardCornerRadius="8dp"
-                app:cardElevation="4dp">
+                app:cardElevation="4dp"
+                style="@style/ShapeAppearanceOverlay.Material3.Button">
 
                 <LinearLayout
                     android:id="@+id/layoutState"
