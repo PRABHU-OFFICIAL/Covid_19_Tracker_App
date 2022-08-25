@@ -3,6 +3,7 @@ package com.example.covid19trackerapp;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
+import android.annotation.SuppressLint;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.graphics.Color;
@@ -125,6 +126,7 @@ public class MainActivity extends AppCompatActivity {
                             // Now it's time for a short delay so that our app fetches the data in time and sets them to their required field
                             Handler delay = new Handler();
                             delay.postDelayed(new Runnable() {
+                                @SuppressLint({"SetTextI18n", "SimpleDateFormat"})
                                 @Override
                                 public void run() {
                                     // Our text data will now be stored here
@@ -146,6 +148,7 @@ public class MainActivity extends AppCompatActivity {
                                     try {
                                         Date date = null;
                                         date = new SimpleDateFormat("dd/MM/yyyy HH:mm" , Locale.US).parse(strUpdateTime);
+                                        assert date != null;
                                         tvDate.setText(new SimpleDateFormat("dd MMM yyyy").format(date));
                                         tvTime.setText(new SimpleDateFormat("hh:mm a").format(date));
                                     } catch (ParseException e) {

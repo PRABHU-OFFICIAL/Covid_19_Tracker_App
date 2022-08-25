@@ -13,4 +13,7 @@
     <string name="search">Search</string>
     <string name="total_cases">Total Cases</string>
     <string name="state">State</string>
+    <string name="last_update">Last update</string>
+    <string name="district_data">District Data</string>
+    <string name="district_city">District/City</string>
 </resources>
