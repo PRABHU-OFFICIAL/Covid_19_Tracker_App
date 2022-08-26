@@ -24,7 +24,7 @@ import java.util.regex.Pattern;
 
 public class DistrictAdapter extends RecyclerView.Adapter<DistrictAdapter.ViewHolder>{
 
-	private Context context;
+	private final Context context;
 	private List<DistrictModel> districtModelsList;
 	private String searchText="";
 
@@ -37,14 +37,14 @@ public class DistrictAdapter extends RecyclerView.Adapter<DistrictAdapter.ViewHo
 	@Override
 	public DistrictAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
 		// We are again going to use the same item layout and will just update the data over it
-		return new ViewHolder(LayoutInflater.from(context).inflate(R.layout.state_item, parent, false));
+		return new ViewHolder(LayoutInflater.from(context).inflate(R.layout.district_item, parent, false));
 	}
 
 	@Override
 	public void onBindViewHolder(@NonNull DistrictAdapter.ViewHolder holder, @SuppressLint("RecyclerView") int position) {
 		holder.tv_districtTotalCases.setText(NumberFormat.getInstance().format(Integer.parseInt(districtModelsList.get(position).getConfirmed())));
 		if(searchText.length()>0){
-			//color your text here
+			//coloring the text here
 			int index = districtModelsList.get(position).getDistrict().indexOf(searchText);
 			SpannableStringBuilder sb = new SpannableStringBuilder(districtModelsList.get(position).getDistrict());
 			Pattern word = Pattern.compile(searchText.toLowerCase());
@@ -67,6 +67,7 @@ public class DistrictAdapter extends RecyclerView.Adapter<DistrictAdapter.ViewHo
 				intent.putExtra("deathNew", districtModelsList.get(position).getNewDeceased());
 				intent.putExtra("recovered", districtModelsList.get(position).getRecovered());
 				intent.putExtra("recoveredNew", districtModelsList.get(position).getNewRecovered());
+				intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
 				context.startActivity(intent);
 			}
 		});
@@ -91,9 +92,9 @@ public class DistrictAdapter extends RecyclerView.Adapter<DistrictAdapter.ViewHo
 
 		public ViewHolder(@NonNull View itemView) {
 			super(itemView);
-			tv_districtName = itemView.findViewById(R.id.stateName);
-			tv_districtTotalCases = itemView.findViewById(R.id.stateConfirmed);
-			districtLayout = itemView.findViewById(R.id.stateWiseLayout);
+			tv_districtName = itemView.findViewById(R.id.districtName);
+			tv_districtTotalCases = itemView.findViewById(R.id.districtConfirmed);
+			districtLayout = itemView.findViewById(R.id.districtWiseLayout);
 		}
 	}
 }
