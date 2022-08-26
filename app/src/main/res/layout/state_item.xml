@@ -28,7 +28,7 @@
             android:layout_weight="2"
             android:ellipsize="end"
             android:gravity="start"
-            android:text="Test"
+            android:text="@string/test"
             android:textColor="#000000"
             android:textStyle="bold"
             android:textSize="16sp" />
@@ -40,7 +40,7 @@
             android:layout_marginStart="5dp"
             android:layout_weight="1"
             android:gravity="start"
-            android:text="Test"
+            android:text="@string/test"
             android:textStyle="bold"
             android:textColor="#fbc233"
             android:textSize="16sp" />

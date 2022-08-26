@@ -15,6 +15,18 @@
             android:layout_height="match_parent"
             android:orientation="vertical">
 
+            <com.google.android.material.appbar.MaterialToolbar
+                android:id="@+id/my_toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="#ff003d"
+                android:elevation="4dp"
+                app:title="@string/data_of_city"
+                app:titleTextColor="@color/white"
+                android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+                app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+                tools:targetApi="m" />
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">

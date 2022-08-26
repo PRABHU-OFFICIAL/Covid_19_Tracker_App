@@ -12,6 +12,8 @@ import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.google.android.material.appbar.MaterialToolbar;
+
 import org.eazegraph.lib.charts.PieChart;
 import org.eazegraph.lib.models.PieModel;
 
@@ -37,6 +39,11 @@ public class IndivisualStateActivity extends AppCompatActivity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_indivisual_state);
+
+		MaterialToolbar toolbar = findViewById(R.id.my_toolbar);
+		setSupportActionBar(toolbar);
+		toolbar.setTitleCentered(true);
+
 		tv_confirmed = findViewById(R.id.stateConfirmed);
 		tv_confirmed_new = findViewById(R.id.stateConfirmedNew);
 		tv_active = findViewById(R.id.stateActive);

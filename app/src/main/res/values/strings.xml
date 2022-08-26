@@ -16,4 +16,8 @@
     <string name="last_update">Last update</string>
     <string name="district_data">District Data</string>
     <string name="district_city">District/City</string>
+    <string name="data_of_india">Data Of India</string>
+    <string name="data_of_state">Data of State</string>
+    <string name="test">Test</string>
+    <string name="data_of_city">Data of City</string>
 </resources>
